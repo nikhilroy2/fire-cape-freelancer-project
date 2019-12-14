@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    font-family: sans-serif;
+    color: rgba(255, 255, 255,.7);
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #182026;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    user-select: none;
+}
+
+/*.............particles-js............*/
+#particles-js{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+}
+/*..........Price Showing Alert.........*/
+.price_showing_alert{
+    position: absolute;
+    top:5%;
+    left: calc(50% - 100px);
+    background: #1e252b;
+    width: 200px;
+    padding: 8px 12px;
+    text-align: center;
+    height: 100px;
+    box-shadow: 0px 0px 3px white, 
+    0px 3px 20px black;
+    border-radius: 5px;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+
+}
+.price_showing_alert .price_result_show{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+.price_show_hide{
+    z-index: 20;
+    opacity: 1;
+    pointer-events: visible;
+}
+.price_showing_alert span{
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: #2A4247;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/*............Price Showing Alert End......*/
+/*..........Calculator Wrapper..........*/
+.cal_wrapper{
+    border: 1px solid white;
+    display: inline-block;
+    width: 700px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 100;
+}
+.cal_wrapper .h1_title{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 8px;
+}
+.top_input_field{
+    text-align: center;
+}
+.col_2_wrapper{
+    /* border: solid blue; */
+    display: flex;
+    justify-content: center;
+}
+.col_2_wrapper .col_2{
+    flex-basis: 320px;
+}
+@media screen and (max-width: 600px) {
+    .col_2_wrapper{
+        flex-flow: row wrap;
+    }
+    .col_2_wrapper .col_2{
+        margin-right: 0px!important;
+    }
+    .cal_wrapper{
+    border: none;
+    }
+}
+.col_2_wrapper .col_2:not(:last-child){
+    margin-right: 20px
+}
+/*.............Input Field..........*/
+.input_field{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+    align-items: center;
+}
+.input_width input{
+    width: 150px;
+}
+.radio_field{
+    justify-content: center;
+}
+.input_field input{
+    font-size: 0.9rem;
+    padding: 8px 5px;
+    display: inline-block;
+    background: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255,.4);
+    color: white;
+    border-radius: 2px;
+}
+.input_field label{
+    padding-right: 12px;
+    width: 115px;
+    text-align: right;
+    font-size: 0.9rem;
+
+}
+
+.rsn_field{
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.rsn_field input{
+    border: 1px solid rgba(255, 255, 255,.2);
+    width: 170px;
+    font-size: 0.9rem;
+
+}
+.btn_price{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 1px 1px rgb(56, 84, 179);
+    border-radius: 2px;
+    margin: 10px 8px;
+    background: #2A4247;
+    color: white;
+    cursor: pointer;
+}
+.btn_price.calbtn{
+    display: block;
+    width: 180px;
+    margin: auto;
+}
+.price_h{
+    text-align: center;
+    font-size: 1rem;
+}
+/*...........radio custom button...........*/
+.radio_field input{
+    position: relative;
+    
+}
+
+.radio_field input::before,
+.radio_field input::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255,.4);
+    top: -5px;
+    left: -7px;
+    cursor: pointer;
+    background: rgb(37, 46, 53);
+}
+.radio_field input::after{
+    border: solid white;
+    border-width: 0px 3px 3px 0px;
+    width: 8px;
+    height: 13px;
+    transform: rotate(35deg);
+    left: -1px;
+    top: -4px;
+    opacity: 0;
+    transition: .1s;
+}
+.radio_field input:checked::after{
+    opacity: 1;
+}

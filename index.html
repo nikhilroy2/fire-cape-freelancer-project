@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   
+    <div class="cal_wrapper">
+        <div class="price_showing_alert">
+            <div class="price_result_show">
+                <!-- Price : 12m -->
+            </div>
+            <span onclick ="removeAlert()">Ok</span>
+        </div>
+        <h1 class="h1_title">Fire Cape Prices</h1>
+
+
+        <!-----------Form------------>
+        <form action="" id="myForm" onsubmit="return formClick()">
+            <div class="top_input_field input_field input_width  rsn_field">
+                <span style="margin-right: 10px; font-size: 0.9rem;">RSN:</span>
+                <input type="number">
+                <button class="btn_price" type="button" style="box-shadow: 0 0;">Fetch Stats</button>
+            </div>
+            <div class="col_2_wrapper">
+                <div class="col_2">
+
+
+                    <div class="input_field input_width "><label for="">Ranged:</label><input value="99" type="number"
+                            name="inputValue" id="ranged"></div>
+
+
+
+                    <div class="input_field input_width "><label for="">Defence:</label><input value="99" type="number"
+                            name="inputValue" id="defence"></div>
+
+
+                    <div class="input_field input_width "><label for="">Hitpoints:</label><input value="99"
+                            type="number" name="inputValue" id="hitpoints"></div>
+
+                </div>
+                <div class="col_2">
+
+                    <div class="input_field input_width "><label for="">Prayer:</label><input value="99" type="number"
+                            name="inputValue" id="prayer"></div>
+                    <div class="input_field input_width "><label for="">Discount Code:</label>
+                        <input placeholder="ABC50" type="text" name="" id="">
+                    </div>
+                    <div class="input_field   radio_field">
+                        <span class="wrapper">
+                            <input type="checkbox" name="radio" id="radio1"> <label for="radio1">Avas</label>
+                        </span>
+
+                    </div>
+                    <button class="btn_price calbtn" type="submit">Calculate Price</button>
+                </div>
+            </div>
+            <div class="price_input" style="text-align: center;">
+                <h2 class="price_h">Estimated price : 240.5M - 290.5M </h2>
+                <a href="#" style="text-decoration: none; box-shadow: 0 0; font-size: 0.9rem;" class="btn_price">Order
+                    Now</a>
+
+            </div>
+        </form>
+
+    </div>
+    <!------------Particle Js Background div Id----------->
+    <div id="particles-js"></div>
+    <!------------Particle Js Background Effect----------->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
