@@ -6,10 +6,7 @@
    let prayer = document.querySelector('#prayer');
 
      // ........... Result Showing Variable Start..........//
-
-     let price_showing_alert = document.querySelector('.price_showing_alert');
-     let price_result_show = document.querySelector('.price_result_show');
-     let myForm = document.querySelector('#myForm');
+     let price_h = document.querySelector('.price_h');
     
      // ........... Result Showing Variable End..........//
 
@@ -23,7 +20,7 @@
     
 
       
-      // ............  Formula   Variable Start...................
+      // ............  Formula 1 Provided  Variable Start...................
       let ranged_1Formula = ranged.value >= 50 && ranged.value <= 60; // 50-60 range
       let ranged_2Formula = ranged.value >= 61 && ranged.value <= 69; //61-69 range
       let ranged_3Formula = ranged.value >= 70 && ranged.value <= 74; // 70-74 range
@@ -33,9 +30,21 @@
       let defence_2Formula = defence.value >= 40 && defence.value <=99; // 40-99 defence
       let hitpoints_1Formula = hitpoints.value >= 50 && hitpoints.value <= 99; //50-99 Hitpoints
       let prayer_1Formula = prayer.value >= 43 && prayer.value <= 99; // 43-99 prayer
-      // ............  Formula   Variable End...................
-     
-      
+      // ............  Formula 1 Provided  Variable End...................
+       
+      //................Formula Provided 2 Variable Start.........//
+      let ranged_1Formula2 = ranged.value >= 50 && ranged.value <= 59; // 50-59 range
+      let ranged_2Formula2 = ranged.value >= 60 && ranged.value <= 69; // 60-69 range
+       // 70-74 range  see Formula 1 Provided..
+       // 75-84 range see Formula 1 Provided..
+       // 75-84 range see Formula 1 Provided..
+       // 85-99 range see Formula 1 Provided
+      let hitpoints_1Formula2 = hitpoints.value >= 50 && hitpoints.value <= 74; // 50-74hp
+      let hitpoints_2Formula2 = hitpoints.value >= 75 && hitpoints.value <= 99; //75-99hp
+      let prayer_1Formula2 = prayer.value >= 1 && prayer.value <= 31; //1-31 prayer
+       
+      //................Formula Provided 2 Variable End.........//
+
       /* formula 1 if statement.
        50-60 range
        1-39 defence 
@@ -44,15 +53,7 @@
         = Price:50m
        */
       if (ranged_1Formula && defence_1Formula && hitpoints_1Formula && prayer_1Formula) {
-         // alert('Formula 1 Show');
-         // result Showing alert start..
-         price_showing_alert.classList.add('price_show_hide');
-         price_result_show.innerHTML = 'Price: 50m';
-          if (price_showing_alert.classList.contains('price_show_hide')) {
-             myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-          }
-
-         // result Showing alert end..
+         price_h.innerHTML = 'Price: 50m';
        
 
       } 
@@ -65,16 +66,9 @@
       = Price:45m
       */
    else  if (ranged_1Formula && defence_2Formula && hitpoints_1Formula && prayer_1Formula ) {
-        // alert('Formula 2 Show');
+      price_h.innerHTML = 'Price: 45m';
 
-        // result Showing alert start..
-        price_showing_alert.classList.add('price_show_hide');
-        price_result_show.innerHTML = 'Price: 45m';
-         if (price_showing_alert.classList.contains('price_show_hide')) {
-            myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-         }
 
-        // result Showing alert end..
       }
 
       /* formula 3 if statement
@@ -86,16 +80,8 @@
       Price: 40m
       */
    else if (ranged_2Formula && defence_1Formula && hitpoints_1Formula && prayer_1Formula ) {
-        // alert('Formula 3 Show');
+      price_h.innerHTML = 'Price: 40m';
 
-         // result Showing alert start..
-         price_showing_alert.classList.add('price_show_hide');
-         price_result_show.innerHTML = 'Price: 40m';
-          if (price_showing_alert.classList.contains('price_show_hide')) {
-             myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-          }
- 
-         // result Showing alert end..
      }
 
      /* formula 4 if statement
@@ -106,15 +92,7 @@
       Price: 35m
      */
    else if (ranged_2Formula && defence_2Formula && hitpoints_1Formula && prayer_1Formula ) {
-     //  alert('Formula 4 Show');
-       // result Showing alert start..
-       price_showing_alert.classList.add('price_show_hide');
-       price_result_show.innerHTML = 'Price: 35m';
-        if (price_showing_alert.classList.contains('price_show_hide')) {
-           myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-        }
-
-       // result Showing alert end..
+      price_h.innerHTML = 'Price: 35m';
 
 
     }
@@ -127,16 +105,9 @@
     Price: 30m
     */
 else if (ranged_3Formula && defence_1Formula && hitpoints_1Formula && prayer_1Formula) {
-     // alert('Formula 5 Show');
+   price_h.innerHTML = 'Price: 30m';
 
-       // result Showing alert start..
-       price_showing_alert.classList.add('price_show_hide');
-       price_result_show.innerHTML = 'Price: 30m';
-        if (price_showing_alert.classList.contains('price_show_hide')) {
-           myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-        }
 
-       // result Showing alert end..
    }
 
    /* formula 6 if statement 
@@ -147,16 +118,9 @@ else if (ranged_3Formula && defence_1Formula && hitpoints_1Formula && prayer_1Fo
     Price: 25m
    */
 else if (ranged_3Formula && defence_2Formula && hitpoints_1Formula && prayer_1Formula) {
-    // alert('Formula 6 Show');
+   price_h.innerHTML = 'Price: 25m';
 
-      // result Showing alert start..
-      price_showing_alert.classList.add('price_show_hide');
-      price_result_show.innerHTML = 'Price: 25m';
-       if (price_showing_alert.classList.contains('price_show_hide')) {
-          myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-       }
 
-      // result Showing alert end..
   }
 
   /* formula 7 if statement
@@ -167,16 +131,9 @@ else if (ranged_3Formula && defence_2Formula && hitpoints_1Formula && prayer_1Fo
   Price:18m
   */
 else if (ranged_4Formula && defence_1Formula && hitpoints_1Formula && prayer_1Formula) {
-   // alert('Formula 7 Show');
+   price_h.innerHTML = 'Price: 18m';
 
-     // result Showing alert start..
-     price_showing_alert.classList.add('price_show_hide');
-     price_result_show.innerHTML = 'Price: 18m';
-      if (price_showing_alert.classList.contains('price_show_hide')) {
-         myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-      }
 
-     // result Showing alert end..
  }
 
  /* formula 8 if statement
@@ -187,15 +144,8 @@ else if (ranged_4Formula && defence_1Formula && hitpoints_1Formula && prayer_1Fo
   Price:15m
  */
 else if (ranged_4Formula && defence_2Formula && hitpoints_1Formula && prayer_1Formula) {
-   // alert('Formula 8 Show');
-     // result Showing alert start..
-     price_showing_alert.classList.add('price_show_hide');
-     price_result_show.innerHTML = 'Price: 15m';
-      if (price_showing_alert.classList.contains('price_show_hide')) {
-         myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-      }
+   price_h.innerHTML = 'Price: 15m';
 
-     // result Showing alert end..
  }
 
  /* formula 9 if statement
@@ -206,15 +156,8 @@ else if (ranged_4Formula && defence_2Formula && hitpoints_1Formula && prayer_1Fo
   Price:13m
  */ 
 else  if (ranged_5Formula && defence_1Formula && hitpoints_1Formula && prayer_1Formula) {
-   //  alert('Formula 9 Show');
-     // result Showing alert start..
-     price_showing_alert.classList.add('price_show_hide');
-     price_result_show.innerHTML = 'Price: 13m';
-      if (price_showing_alert.classList.contains('price_show_hide')) {
-         myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-      }
+   price_h.innerHTML = 'Price: 13m';
 
-     // result Showing alert end..
   }
 
   /* formula 10 if statement 
@@ -225,26 +168,133 @@ else  if (ranged_5Formula && defence_1Formula && hitpoints_1Formula && prayer_1F
    Price:12m
   */
 else if (ranged_5Formula && defence_2Formula && hitpoints_1Formula && prayer_1Formula) {
-   // alert('Formula 10 Show');
-     // result Showing alert start..
-     price_showing_alert.classList.add('price_show_hide');
-     price_result_show.innerHTML = 'Price: 12m';
-      if (price_showing_alert.classList.contains('price_show_hide')) {
-         myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-      }
+   price_h.innerHTML = 'Price: 12m';
 
-     // result Showing alert end..
  }
+ /*.......................Formula Provided 2.............*/
+  // formula 1 ...provided 2
+
+  // 50-59 range
+  // 50-74hp
+  // 1-31 prayer
+  // Price:325m + 4k sweets
+
+  else if (ranged_1Formula2 && hitpoints_1Formula2 && prayer_1Formula2) {
+     price_h.innerHTML = 'Price: 325m + 4k sweets'
+  }
+
+  // formula 2 ...provided 2
+
+  // 50-59 range
+  // 75-99hp
+  // 1-31 prayer
+  // Price: 300m + 4k sweets
+
+  else if (ranged_1Formula2 && hitpoints_2Formula2 && prayer_1Formula2 ) {
+     price_h.innerHTML = 'Price: 300m + 4k sweets'
+  }
+
+  // formula 3 ...provided 2
+
+  // 60-69 range
+  // 50-74hp
+  // 1-31 prayer
+  // Price: 190m + 3k sweets
+  else if (ranged_2Formula2 && hitpoints_1Formula2 && prayer_1Formula2 ) {
+     price_h.innerHTML = 'Price: 190m + 3k sweets';
+  }
+
+  // formula 4 ...provided 2
+
+  // 60-69 range
+  // 75-99hp
+  // 1-31 prayer
+  // Price: 175m + 3k sweets
+
+  else if (ranged_2Formula2 && hitpoints_2Formula2 && prayer_1Formula2) {
+     price_h.innerHTML = 'Price: 175m + 3k sweets';
+  }
+
+  
+// formula 5 ...provided 2
+
+  // 70-74 range
+  // 50-74hp
+  // 1-31 prayer
+  // Price: 160m + 3k sweets
+
+  else if (ranged_3Formula && hitpoints_1Formula2 && prayer_1Formula2) {
+     price_h.innerHTML = 'Price: 160m + 3k sweets';
+  }
+
+  // formula 6 ...provided 2
+
+  // 70-74 range
+  // 75-99hp
+  // 1-31 prayer
+  // Price: 145m + 3k sweets
+
+  else if (ranged_3Formula && hitpoints_2Formula2 && prayer_1Formula2 ) {
+     price_h.innerHTML = 'Price: 145m + 3k sweets';
+  }
+
+  // formula 7 ...provided 2
+
+  // 75-84 range
+  // 50-74hp
+  // 1-31 prayer
+  // Price: 90m + 3k sweets
+
+  else if (ranged_4Formula && hitpoints_1Formula2 && prayer_1Formula2 ) {
+     price_h.innerHTML = 'Price: 90m + 3k sweets';
+  }
+
+// formula 8 ...provided 2
+
+ // 75-84 range
+ // 75-99hp
+ // 1-31 prayer
+ // Price: 85m + 3k sweets
+
+ else if (ranged_4Formula && hitpoints_2Formula2 && prayer_1Formula2 ) {
+    price_h.innerHTML = 'Price: 85m + 3k sweets';
+ }
+
+ // formula 9 ...provided 2
+
+ // 85-99 range
+ // 50-74hp
+ // 1-31prayer
+ // Price: 80m + 3k sweets
+
+ else if (ranged_5Formula && hitpoints_1Formula2 && prayer_1Formula2 ) {
+    price_h.innerHTML = 'Price: 80m + 3k sweets';
+ }
+
+
+// formula 10 ...provided 2
+
+ // 85-99 range
+ // 75-99hp
+ // 1-31 prayer
+ // Price: 75m + 3k sweet
+
+ else if (ranged_5Formula && hitpoints_2Formula2 && prayer_1Formula2 ) {
+    price_h.innerHTML = 'Price: 75m + 3k sweet';
+ }
+ /*.......................Formula Provided 2 End.............*/
+
 
  // formula not found statement
  else {
-   // alert('Formula doesn\'t match ')
+   price_h.innerHTML = 'Price Not Matched';
+
      // result Showing alert start..
-     price_showing_alert.classList.add('price_show_hide');
-     price_result_show.innerHTML = 'Sorry! Not Matched.';
-      if (price_showing_alert.classList.contains('price_show_hide')) {
-         myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
-      }
+   //   price_showing_alert.classList.add('price_show_hide');
+   //   price_result_show.innerHTML = 'Sorry! Not Matched.';
+      // if (price_showing_alert.classList.contains('price_show_hide')) {
+         // myForm.setAttribute('style', 'opacity: 0.3; pointer-events: none;');
+      // }
 
      // result Showing alert end..
  }
@@ -252,32 +302,11 @@ else if (ranged_5Formula && defence_2Formula && hitpoints_1Formula && prayer_1Fo
       return false;
    };
 
-   // formClick function ended........
-
-
-
-    //  remove result alert ...
-    function removeAlert(){
-      price_showing_alert.classList.remove('price_show_hide');
-      myForm.setAttribute('style', 'opacity: 1; pointer-events: visible;');
-    }
-
-
-
 }
 
 
 
-
-
-
-
-
-
-
-
-
-/* formula.............
+/* formula provided 1.............
 
 formula 1.....
 
@@ -368,4 +397,89 @@ formula 10...
 50-99 hitpoints
 43-99 prayer
 Price:12m
+*/
+
+
+/* Formula provided 2
+
+// formula 1 ...provided 2
+
+50-59 range
+50-74hp
+1-31 prayer
+Price:325m + 4k sweets
+
+
+// formula 2 ...provided 2
+
+50-59 range
+75-99hp
+1-31 prayer
+Price: 300m + 4k sweets
+
+
+// formula 3 ...provided 2
+
+60-69 range
+50-74hp
+1-31 prayer
+Price: 190m + 3k sweets
+
+
+// formula 4 ...provided 2
+
+60-69 range
+75-99hp
+1-31 prayer
+Price: 175m + 3k sweets
+
+
+// formula 5 ...provided 2
+
+70-74 range
+50-74hp
+1-31 prayer
+Price: 160m + 3k sweets
+
+
+// formula 6 ...provided 2
+
+70-74 range
+75-99hp
+1-31 prayer
+Price: 145m + 3k sweets
+
+
+// formula 7 ...provided 2
+
+75-84 range
+50-74hp
+1-31 prayer
+Price: 90m + 3k sweets
+
+
+// formula 8 ...provided 2
+
+75-84 range
+75-99hp
+1-31 prayer
+Price: 85m + 3k sweets
+
+
+// formula 9 ...provided 2
+
+85-99 range
+50-74hp
+1-31prayer
+Price: 80m + 3k sweets
+
+
+// formula 10 ...provided 2
+
+85-99 range
+75-99hp
+1-31 prayer
+Price: 75m + 3k sweet
+
+
 */
